@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <ScrollViewer>
+    <RelativePanel>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState>
@@ -15,31 +15,63 @@
                         <AdaptiveTrigger MinWindowWidth="550"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="stpFurry1.Orientation" Value="Horizontal"/>
-                        <Setter Target="stpFurry2.Orientation" Value="Horizontal"/>
-                        <Setter Target="stpFurry3.Orientation" Value="Horizontal"/>
+                        <Setter Target="ImageFurry2.(Grid.Column)" Value="1"/>
+                        <Setter Target="ImageFurry2.(Grid.Row)" Value="0"/>
+                        <Setter Target="ImageFurry3.(Grid.Column)" Value="2"/>
+                        <Setter Target="ImageFurry3.(Grid.Row)" Value="0"/>
+                        <Setter Target="ImageFurry4.(Grid.Column)" Value="0"/>
+                        <Setter Target="ImageFurry4.(Grid.Row)" Value="1"/>
+                        <Setter Target="ImageFurry5.(Grid.Column)" Value="1"/>
+                        <Setter Target="ImageFurry5.(Grid.Row)" Value="1"/>
+                        <Setter Target="ImageFurry6.(Grid.Column)" Value="2"/>
+                        <Setter Target="ImageFurry6.(Grid.Row)" Value="1"/>
+                        <Setter Target="ImageFurry7.(Grid.Column)" Value="0"/>
+                        <Setter Target="ImageFurry7.(Grid.Row)" Value="2"/>
+                        <Setter Target="ImageFurryCheto.(Grid.Column)" Value="1"/>
+                        <Setter Target="ImageFurryCheto.(Grid.Row)" Value="2"/>
+                        <Setter Target="ImageFurryAleman.(Grid.Column)" Value="2"/>
+                        <Setter Target="ImageFurryAleman.(Grid.Row)" Value="2"/>
+                        <Setter Target="ImageFurry1.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurry2.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurry3.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurry4.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurry5.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurry6.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurry7.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurryCheto.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ImageFurryAleman.(Grid.ColumnSpan)" Value="1"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <RelativePanel>
-            <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
-                <StackPanel x:Name="stpFurry1" HorizontalAlignment="Center">
-                    <Image x:Name="ImageFurry1" Source="/Assets/furro1.jfif" Width="250" Height="250"/>
-                    <Image x:Name="ImageFurry2" Source="/Assets/furro2.jfif" Width="250" Height="250"/>
-                    <Image x:Name="ImageFurry3" Source="/Assets/furro3.jfif" Width="250" Height="250"/>
-                </StackPanel>
-                <StackPanel  x:Name="stpFurry2" HorizontalAlignment="Center">
-                    <Image x:Name="ImageFurry4" Source="/Assets/furro4.jpg" Width="250" Height="250"/>
-                    <Image x:Name="ImageFurry5" Source="/Assets/furro5.jpg" Width="250" Height="250"/>
-                    <Image x:Name="ImageFurry6" Source="/Assets/furro6.jfif" Width="250" Height="250"/>
-                </StackPanel>
-                <StackPanel  x:Name="stpFurry3" HorizontalAlignment="Center">
-                    <Image x:Name="ImageFurry7" Source="/Assets/furro7.jpg" Width="250" Height="250" />
-                    <Image x:Name="ImageFurryChero" Source="/Assets/furroCheto.png" Width="250" Height="250"/>
-                    <Image x:Name="ImageFurryAleman" Source="/Assets/furroAleman.jpg" Width="250" Height="250"/>
-                </StackPanel>
-            </StackPanel>
-    </RelativePanel>
+        <ScrollViewer RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <Grid x:Name="gridFurros">
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" x:Name="ImageFurry1" Source="/Assets/furro1.jfif" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" x:Name="ImageFurry2" Source="/Assets/furro2.jfif" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" x:Name="ImageFurry3" Source="/Assets/furro3.jfif" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" x:Name="ImageFurry4" Source="/Assets/furro4.jpg" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" x:Name="ImageFurry5" Source="/Assets/furro5.jpg" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" x:Name="ImageFurry6" Source="/Assets/furro6.jfif" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" x:Name="ImageFurry7" Source="/Assets/furro7.jpg" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3" x:Name="ImageFurryCheto" Source="/Assets/furroCheto.png" Width="250" Height="250"/>
+                <Image Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3" x:Name="ImageFurryAleman" Source="/Assets/furroAleman.jpg" Width="250" Height="250"/>
+            </Grid>
     </ScrollViewer>
+    </RelativePanel>
 </Page>
