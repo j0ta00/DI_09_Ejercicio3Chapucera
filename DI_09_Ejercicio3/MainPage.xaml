@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="DI_09_Ejercicio3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DI_09_Ejercicio3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="550"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="stpFurry1.Orientation" Value="Horizontal"/>
+                        <Setter Target="stpFurry2.Orientation" Value="Horizontal"/>
+                        <Setter Target="stpFurry3.Orientation" Value="Horizontal"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <RelativePanel>
+            <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                <StackPanel x:Name="stpFurry1" HorizontalAlignment="Center">
+                    <Image x:Name="ImageFurry1" Source="/Assets/furro1.jfif" Width="250" Height="250"/>
+                    <Image x:Name="ImageFurry2" Source="/Assets/furro2.jfif" Width="250" Height="250"/>
+                    <Image x:Name="ImageFurry3" Source="/Assets/furro3.jfif" Width="250" Height="250"/>
+                </StackPanel>
+                <StackPanel  x:Name="stpFurry2" HorizontalAlignment="Center">
+                    <Image x:Name="ImageFurry4" Source="/Assets/furro4.jpg" Width="250" Height="250"/>
+                    <Image x:Name="ImageFurry5" Source="/Assets/furro5.jpg" Width="250" Height="250"/>
+                    <Image x:Name="ImageFurry6" Source="/Assets/furro6.jfif" Width="250" Height="250"/>
+                </StackPanel>
+                <StackPanel  x:Name="stpFurry3" HorizontalAlignment="Center">
+                    <Image x:Name="ImageFurry7" Source="/Assets/furro7.jpg" Width="250" Height="250" />
+                    <Image x:Name="ImageFurryChero" Source="/Assets/furroCheto.png" Width="250" Height="250"/>
+                    <Image x:Name="ImageFurryAleman" Source="/Assets/furroAleman.jpg" Width="250" Height="250"/>
+                </StackPanel>
+            </StackPanel>
+    </RelativePanel>
+    </ScrollViewer>
+</Page>
